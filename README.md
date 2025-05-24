@@ -1,7 +1,7 @@
-ReMed - Medication Reminder Application
+**ReMed ** - Medication Reminder Application
 ReMed is a comprehensive medication management system designed to help patients track their medications, set reminders, and manage their health effectively.
 
-Features
+**Features**
 Medicine Management: Add, edit, and track medications
 Reminder System: Set customized medication reminders with:
 Multiple daily reminders
@@ -11,7 +11,8 @@ Snooze options
 Critical medication prioritization
 Reporting: Track medication adherence and health metrics
 User Management: Support for patients, family members, and healthcare providers
-Project Structure
+
+**Project Structure**
 Frontend: React-based web application
 Backend: Node.js/Express API
 Database: MySQL
@@ -19,13 +20,15 @@ Setup Instructions for Team Members
 Prerequisites
 Node.js v14+ and npm
 MySQL 8.0+
-Git
+
+**Git**
 1. Clone the Repository
 git clone [your-repository-url]
 cd remed
-2. Database Setup
+3. Database Setup
 Install MySQL if not already installed (see backend/MYSQL_SETUP.md for detailed instructions)
-Log in to MySQL:
+
+**Log in to MySQL:**
 mysql -u root -p
 Create the database and user:
 CREATE DATABASE remed;
@@ -33,11 +36,13 @@ CREATE USER 'remed'@'localhost' IDENTIFIED BY 'remed_password';
 GRANT ALL PRIVILEGES ON remed.* TO 'remed'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
-Import the database from the SQL file:
+
+**Import the database from the SQL file:**
 mysql -u remed -p remed < backend/remed_database.sql
-3. Backend Setup
+5. Backend Setup
 Navigate to the backend directory:
 cd backend
+
 Install dependencies:
 npm install
 Create a .env file with the following content:
@@ -49,7 +54,7 @@ JWT_SECRET=your_jwt_secret_key
 PORT=5000
 Start the backend server:
 npm run dev
-4. Frontend Setup
+6. Frontend Setup
 Navigate to the frontend directory:
 cd ../frontend
 Install dependencies:
