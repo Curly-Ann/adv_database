@@ -1,4 +1,4 @@
-**ReMed ** - Medication Reminder Application
+# ReMed - Medication Reminder Application
 ReMed is a comprehensive medication management system designed to help patients track their medications, set reminders, and manage their health effectively.
 
 **Features**
@@ -21,14 +21,14 @@ Prerequisites
 Node.js v14+ and npm
 MySQL 8.0+
 
-**Git**
+# Git
 1. Clone the Repository
 git clone [your-repository-url]
 cd remed
 3. Database Setup
 Install MySQL if not already installed (see backend/MYSQL_SETUP.md for detailed instructions)
 
-**Log in to MySQL:**
+# Log in to MySQL:
 mysql -u root -p
 Create the database and user:
 CREATE DATABASE remed;
@@ -37,7 +37,7 @@ GRANT ALL PRIVILEGES ON remed.* TO 'remed'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 
-**Import the database from the SQL file:**
+# Import the database from the SQL file:
 mysql -u remed -p remed < backend/remed_database.sql
 5. Backend Setup
 Navigate to the backend directory:
@@ -45,7 +45,8 @@ cd backend
 
 Install dependencies:
 npm install
-Create a .env file with the following content:
+
+**Create a .env file with the following content:**
 DB_HOST=localhost
 DB_USER=remed
 DB_PASSWORD=remed_password
@@ -57,13 +58,16 @@ npm run dev
 6. Frontend Setup
 Navigate to the frontend directory:
 cd ../frontend
-Install dependencies:
+
+_Install dependencies:_
+
 npm install
 Start the frontend development server:
 npm run dev
 Working on the Project as a Team
 Workflow
-Always pull the latest changes before starting work:
+
+# Always pull the latest changes before starting work:
 git pull origin main
 Create a branch for your feature:
 git checkout -b feature/your-feature-name
@@ -85,6 +89,7 @@ Frontend: http://localhost:3000
 Backend API: http://localhost:5000
 Troubleshooting
 Server Already Running
+
 If you get an error about the port already being in use:
 
 # Find the process using port 5000
@@ -95,7 +100,7 @@ kill -9 [PID]
 Database Connectivity Issues
 If you have issues connecting to the database:
 
-Verify MySQL is running
+# Verify MySQL is running
 Check your database credentials in the .env file
 Ensure the remed database exists and the user has proper permissions
 Project Roadmap
