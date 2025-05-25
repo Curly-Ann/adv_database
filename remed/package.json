@@ -4,6 +4,7 @@
   "description": "Medicine Reminder and Inventory Management System",
   "main": "index.js",
   "scripts": {
+    "start": "cd backend && node server.js",
     "start:backend": "cd backend && node server.js",
     "start:frontend": "cd frontend && npm start",
     "dev:backend": "cd backend && nodemon server.js",
