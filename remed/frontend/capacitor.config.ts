@@ -3,7 +3,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'com.remed.app',
   appName: 'ReMed',
-  webDir: 'dist',
+  webDir: 'build',
   server: {
     androidScheme: 'http',
     cleartext: true,
