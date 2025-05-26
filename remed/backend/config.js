@@ -1,3 +1,5 @@
+// config.js
+
 // Database configuration
 const dbConfig = {
   host: process.env.DB_HOST || 'localhost',
@@ -17,6 +19,9 @@ const serverConfig = {
   port: process.env.PORT || 5000
 };
 
-module.exports.serverConfig = {
- port: process.env.PORT || 5000
-}; 
+// ✅ Export all configs
+module.exports = {
+  dbConfig,
+  jwtConfig,
+  serverConfig
+};
