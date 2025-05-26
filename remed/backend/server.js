@@ -5,13 +5,7 @@ const cors = require('cors');
 const { serverConfig } = require('./config');
 const { testConnection } = require('./db');
 
-// Routes
-const authRoutes = require('./routes/auth');
-const userRoutes = require('./routes/users');
-const medicineRoutes = require('./routes/medicines');
-const reminderRoutes = require('./routes/reminders');
-const reportRoutes = require('./routes/reports');
-const vaultRoutes = require('./routes/vaults');
+const app = express();
 
 const path = require('path');
 
@@ -23,10 +17,16 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
 });
 
+// Routes
+const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/users');
+const medicineRoutes = require('./routes/medicines');
+const reminderRoutes = require('./routes/reminders');
+const reportRoutes = require('./routes/reports');
+const vaultRoutes = require('./routes/vaults');
+
 // Uncomment intakeRoutes
 const intakeRoutes = require('./routes/intakeRoutes');
-
-const app = express();
 
 // Middleware
 app.use(express.json());
