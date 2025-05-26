@@ -123,8 +123,8 @@ Create a pull request to merge into main.
 - Notify the team about the changes
 
 ### 🌐 App Access
--**Frontend:** http://localhost:3000
--**Backend API**  http://localhost:5000
+- **Frontend:** http://localhost:3000
+- **Backend API**  http://localhost:5000
 
 ### 🧩 Troubleshooting
 

@@ -1,8 +1,9 @@
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const { serverConfig } = require('./config');
 const { testConnection } = require('./db');
-require('dotenv').config();
 
 // Routes
 const authRoutes = require('./routes/auth');
@@ -11,6 +12,17 @@ const medicineRoutes = require('./routes/medicines');
 const reminderRoutes = require('./routes/reminders');
 const reportRoutes = require('./routes/reports');
 const vaultRoutes = require('./routes/vaults');
+
+const path = require('path');
+
+// Serve React static files
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+// Catch-all handler for client-side routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+});
+
 // Uncomment intakeRoutes
 const intakeRoutes = require('./routes/intakeRoutes');
 
