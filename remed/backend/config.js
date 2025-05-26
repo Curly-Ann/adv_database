@@ -17,8 +17,6 @@ const serverConfig = {
   port: process.env.PORT || 5000
 };
 
-module.exports = {
-  dbConfig,
-  jwtConfig,
-  serverConfig
+module.exports.serverConfig = {
+ port: process.env.PORT || 5000
 }; 
